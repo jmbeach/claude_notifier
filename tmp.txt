@@ -1,0 +1,3 @@
+This is the core functionality of the claude_notifier program. It
+should send a notification when claude code is completely done with
+a response or waiting on user input
