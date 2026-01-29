@@ -5,7 +5,7 @@ use std::process::ExitCode;
 
 #[derive(Deserialize)]
 struct HookContext {
-    hook_type: String,
+    hook_event_name: String,
     message: Option<String>,
 }
 
@@ -37,7 +37,7 @@ fn main() -> ExitCode {
         }
     };
 
-    let notification_body = match context.hook_type.as_str() {
+    let notification_body = match context.hook_event_name.as_str() {
         "Stop" => Some("Claude is waiting for your input".to_string()),
         "Notification" => context.message,
         _ => None,
