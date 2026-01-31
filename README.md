@@ -17,12 +17,22 @@ Add to your Claude Code settings (`.claude/settings.json` or global settings):
   "hooks": {
     "Stop": [
       {
-        "command": "claude_notifier"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "claude_notifier"
+          }
+        ]
       }
     ],
     "Notification": [
       {
-        "command": "claude_notifier"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "claude_notifier"
+          }
+        ]
       }
     ]
   }
